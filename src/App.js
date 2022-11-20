@@ -74,10 +74,20 @@ function App() {
             : data.twitter_username}
         </h6>
         <h6 className="mb-0 mt-2">
-          Blog: {data.blog === null ? "Not defined" : data.blog}
+          Blog:{" "}
+          {data.blog === "" ? (
+            "Not defined"
+          ) : (
+            <a href={data.blog} target="_blank">
+              {data.blog}
+            </a>
+          )}
         </h6>
         <h6 className="mb-0 mt-2">
-          GitHub Url: <a href={data.url}>{data.url}</a>
+          GitHub Url:{" "}
+          <a href={data.html_url} target="_blank">
+            {data.html_url}
+          </a>
         </h6>
       </div>
     </div>
